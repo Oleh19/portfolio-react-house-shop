@@ -1,5 +1,5 @@
-TypeScript
-React
-SCSS
-Redux Toolkit
-Framer Motion
+- TypeScript
+- React
+- SCSS
+- Redux Toolkit
+- Framer Motion
