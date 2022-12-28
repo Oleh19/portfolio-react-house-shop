@@ -1,0 +1,162 @@
+[
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "1",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 1",
+     "types": [
+      0
+     ],
+     "furniture": [
+      "with furniture",
+      "without furniture"
+     ],
+     "price": 700000,
+     "category": 3,
+     "rating": 6
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "2",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 2",
+     "types": [
+      0
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 477000,
+     "category": 1,
+     "rating": 4
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "3",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 3",
+     "types": [
+      1
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 900000,
+     "category": 2,
+     "rating": 2
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "4",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 4",
+     "types": [
+      0
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 905000,
+     "category": 3,
+     "rating": 8
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "5",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 5",
+     "types": [
+      1
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 580000,
+     "category": 2,
+     "rating": 2
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "6",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 6",
+     "types": [
+      1
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 695000,
+     "category": 1,
+     "rating": 9
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "7",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 7",
+     "types": [
+      0
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 350000,
+     "category": 4,
+     "rating": 10
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "8",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 8",
+     "types": [
+      0
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 895000,
+     "category": 5,
+     "rating": 10
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "9",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 9",
+     "types": [
+      1
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 762000,
+     "category": 5,
+     "rating": 7
+    },
+    {
+     "secondImg": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "id": "10",
+     "imageUrl": "https://www.engelvoelkers.com/images/09addd78-808f-46a9-be2f-270a701c6076/reiterhof-mit-7-ferienwohnungen-an-der-k%C3%BCste-au%C3%9Fenansicht",
+     "title": "House 10",
+     "types": [
+      1
+     ],
+     "furniture": [
+        "with furniture",
+        "without furniture"
+       ],
+     "price": 819000,
+     "category": 1,
+     "rating": 4
+    }
+   ]
