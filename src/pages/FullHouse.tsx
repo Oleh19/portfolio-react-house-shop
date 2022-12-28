@@ -8,7 +8,7 @@ const FullHouse: FC = () => {
     imageUrl: string;
     title: string;
     price: number;
-    secondImg: string;
+    secondImg: string[];
   }>();
 
   const { id } = useParams();
@@ -32,20 +32,40 @@ const FullHouse: FC = () => {
     return <>Loading...</>;
   }
 
+
+
   return (
-    <div className="container">
-      <div className=""></div>
+    <div className="">
+      <div className="full-item">
+        <div className="image-block">
+          <img className="full-image" src={house.imageUrl} alt="house" />
+          <div className="price">
+            <h3>{house.title}</h3>
+            <h3>Price: {house.price} $</h3>
+          </div>
+        </div>
+        <div className="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laboriosam iste, cum,
+          excepturi mollitia officiis deserunt consequuntur quisquam ut a dolore vero doloribus rem
+          voluptas, nam aliquid suscipit! Voluptates, sapiente! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Fugit laudantium, consequuntur quam perferendis beatae
+          deserunt iste est odio recusandae voluptas temporibus corporis aperiam, blanditiis
+          cupiditate in vel eius ea molestiae? Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Rerum at alias dolor minima cum est facere blanditiis? Iusto ad, eveniet expedita
+          ullam delectus, quisquam excepturi fugit voluptatibus laborum suscipit enim!
+        </div>
+      </div>
 
-
-      {/* <img src={house.imageUrl} alt="house" />
-      <h2>{house.title}</h2>
-      <h4>{house.price} $</h4>
-      <img src={house.secondImg} alt="foto of house" />
-      <Link to="/">
+      {/* <div className="carousel-wrapper">
+        {house.secondImg.map((img) => (
+          <img className="carousel" src={img} alt="house"></img>
+        ))}
+      </div> */}
+      <Link className="bot-container" to="/">
         <button className="button button--outline button--add">
           <span>Back</span>
         </button>
-      </Link> */}
+      </Link>
     </div>
   );
 };

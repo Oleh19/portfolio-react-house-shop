@@ -17,6 +17,7 @@ type ItemBlockProps = {
   rating: number;
 };
 
+
 export const ItemBlock:FC<ItemBlockProps> = ({
   id,
   title,

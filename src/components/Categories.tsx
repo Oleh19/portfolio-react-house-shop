@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import  {FC, memo} from 'react';
 
 type CategoriesProps = {
@@ -8,8 +9,19 @@ type CategoriesProps = {
 const categories = ['All', 'First', 'Second', 'Fourth', 'Fifth', 'Sixth'];
 
 export const Categories:FC<CategoriesProps> = memo(({ value, onChangeCategory }) => {
+  const headerAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <div className="categories">
+    <motion.div initial="hidden" whileInView="visible" variants={headerAnimation}
+    style={{ transitionDuration: '0.2s' }} className="categories">
       <ul>
         {categories.map((categoryName, i) => (
           <li key={i} onClick={() => onChangeCategory(i)} className={value === i ? 'active' : ''}>
@@ -17,6 +29,6 @@ export const Categories:FC<CategoriesProps> = memo(({ value, onChangeCategory })
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 });

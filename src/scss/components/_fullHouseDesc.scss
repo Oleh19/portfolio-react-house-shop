@@ -1,0 +1,50 @@
+.full-item {
+    display: flex;
+
+
+    .image-block {
+        flex-direction: column;
+
+        .full-image {
+            width: 30vw;
+        }
+
+        .price {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .description {
+        margin-left: 2vh;
+        text-align: justify;
+        font-size: 1vw;
+
+        &::first-letter {
+            font-size: calc(2em);
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+}
+
+.carousel-wrapper {
+    display: flex;
+    justify-content:start;
+    flex-wrap: wrap;
+
+
+
+    .carousel {
+        margin: 1vw 0;
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+    }
+}
+
+.bot-container{
+    
+}

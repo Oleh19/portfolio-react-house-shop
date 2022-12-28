@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import logoSvg from '../assets/image/logo.svg';
 import { Search } from '.';
 import { selectCart } from '../redux/cart/selectors';
+import { motion } from 'framer-motion';
 
 export const Header: FC = () => {
   const { items, totalPrice } = useSelector(selectCart);
@@ -21,11 +22,23 @@ export const Header: FC = () => {
     isMounted.current = true;
   }, [items]);
 
+  const headerAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div
-    
-    className="header">
-      <div className="container">
+    <motion.div initial="hidden" whileInView="visible" className="header">
+      <motion.div
+        variants={headerAnimation}
+        style={{ transitionDuration: '0.2s' }}
+        className="container">
         <Link to="/">
           <div className="header__logo">
             <img width="58" src={logoSvg} alt="Goods logo" className="header__radius" />
@@ -73,7 +86,7 @@ export const Header: FC = () => {
             </Link>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
