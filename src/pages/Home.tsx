@@ -10,8 +10,9 @@ import { selectFilter } from '../redux/filter/selectors';
 import { selectItemData } from '../redux/item/selectors';
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice';
 import { fetchItems } from '../redux/item/asyncAction';
+import { motion } from 'framer-motion';
 
-const Home:FC = () => {
+const Home: FC = () => {
   const dispatch = useAppDispatch();
 
   const { items, status } = useSelector(selectItemData);
@@ -48,15 +49,44 @@ const Home:FC = () => {
     getItems();
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-  const houseItem = items.map((obj:any) => <ItemBlock key={obj.id} {...obj} />);
+  const houseItem = items.map((obj: any) => <ItemBlock key={obj.id} {...obj} />);
   const skeletons = [...new Array(4)].map((_, index) => <Skeleton key={index} />);
+
+  const headerAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const blockAnimation = {
+    hidden: {
+      x: 0,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1.5 },
+    },
+  };
 
   return (
     <div className="container">
-      <div className="content__top">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={headerAnimation}
+        className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort value={sort} />
-      </div>
+      </motion.div>
+
       <h2 className="content__title">All houses</h2>
       {status === 'error' ? (
         <div className="content__error-info">
@@ -64,7 +94,11 @@ const Home:FC = () => {
           <p>Something wrong. Try later</p>
         </div>
       ) : (
-        <div className="content__items">{status === 'loading' ? skeletons : houseItem}</div>
+        <motion.div  initial="hidden"
+        whileInView="visible"
+        variants={blockAnimation}
+        
+        className="content__items">{status === 'loading' ? skeletons : houseItem}</motion.div>
       )}
     </div>
   );

@@ -54,8 +54,6 @@ export const ItemBlock:FC<ItemBlockProps> = ({
        <img className="item-block__image" src={imageUrl} alt="Item" />
           <h4 className="item-block__title">{title}</h4>
        </Link>
-         
-      
         <div className="item-block__selector">
           <ul>
             {types.map((typeId) => (

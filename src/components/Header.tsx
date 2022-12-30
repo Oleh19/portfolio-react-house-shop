@@ -30,15 +30,17 @@ export const Header: FC = () => {
     visible: {
       x: 0,
       opacity: 1,
+      transition: { duration: 0.5 }
     },
   };
 
   return (
-    <motion.div initial="hidden" whileInView="visible" className="header">
-      <motion.div
-        variants={headerAnimation}
-        style={{ transitionDuration: '0.2s' }}
-        className="container">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={headerAnimation}
+      className="header">
+      <div className="container">
         <Link to="/">
           <div className="header__logo">
             <img width="58" src={logoSvg} alt="Goods logo" className="header__radius" />
@@ -86,7 +88,7 @@ export const Header: FC = () => {
             </Link>
           )}
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import { FC, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -32,19 +33,55 @@ const FullHouse: FC = () => {
     return <>Loading...</>;
   }
 
+  const textAnimation = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+  };
 
+  const imageAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+  };
 
   return (
-    <div className="">
+    <div>
       <div className="full-item">
-        <div className="image-block">
+        <motion.div
+          variants={imageAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="image-block">
           <img className="full-image" src={house.imageUrl} alt="house" />
           <div className="price">
             <h3>{house.title}</h3>
             <h3>Price: {house.price} $</h3>
+            <button className="button button--outline button--add">
+              <Link className="bot-container" to="/">
+                <span>Back</span>
+              </Link>
+            </button>
           </div>
-        </div>
-        <div className="description">
+        </motion.div>
+
+        <motion.div
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laboriosam iste, cum,
           excepturi mollitia officiis deserunt consequuntur quisquam ut a dolore vero doloribus rem
           voluptas, nam aliquid suscipit! Voluptates, sapiente! Lorem ipsum dolor sit amet
@@ -53,19 +90,8 @@ const FullHouse: FC = () => {
           cupiditate in vel eius ea molestiae? Lorem, ipsum dolor sit amet consectetur adipisicing
           elit. Rerum at alias dolor minima cum est facere blanditiis? Iusto ad, eveniet expedita
           ullam delectus, quisquam excepturi fugit voluptatibus laborum suscipit enim!
-        </div>
+        </motion.div>
       </div>
-
-      {/* <div className="carousel-wrapper">
-        {house.secondImg.map((img) => (
-          <img className="carousel" src={img} alt="house"></img>
-        ))}
-      </div> */}
-      <Link className="bot-container" to="/">
-        <button className="button button--outline button--add">
-          <span>Back</span>
-        </button>
-      </Link>
     </div>
   );
 };

@@ -18,7 +18,7 @@
 
     &:hover {
       transform: scale(1.05);
-      transition-duration: 1s;
+      transition-duration: 0.5s;
       box-shadow: 0px 0px 0px 3px rgb(255, 255, 255);
     }
   }
@@ -32,7 +32,7 @@
 
   &__selector {
     display: flex;
-    background-color: #dfdcdc;
+    background-color:rgb(153, 226, 255);
     border-radius: 10px;
     flex-direction: column;
     padding: 6px;
