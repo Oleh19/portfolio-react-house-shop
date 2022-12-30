@@ -1,6 +1,7 @@
 {
   "name": "portfolio-house-shop",
   "version": "0.1.0",
+  "homepage": "https://Oleh19.github.io/portfolio-react-house-shop",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^18.0.0",
     "axios": "^1.2.1",
     "framer-motion": "^8.0.2",
+    "gh-pages": "^4.0.0",
     "hoist-non-react-statics": "^3.3.2",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.0",
@@ -27,6 +29,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

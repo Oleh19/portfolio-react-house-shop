@@ -1,16 +1,23 @@
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const FullHouse: FC = () => {
+  const [leftWidth, setLeftWidth] = useState(0);
   const [house, setHouse] = useState<{
     imageUrl: string;
     title: string;
     price: number;
     secondImg: string[];
   }>();
+
+  const carousel: any = useRef(0);
+
+  useEffect(() => {
+    setLeftWidth(carousel.current.scrollWidth + carousel.current.offsetWidth);
+  }, []);
 
   const { id } = useParams();
 
@@ -58,6 +65,16 @@ const FullHouse: FC = () => {
     },
   };
 
+  const carouselAnimation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { duration: 1.5 },
+    },
+  };
+
   const photos = house.secondImg.map((photo, index) => (
     <motion.div className="item" key={index}>
       <img src={photo} alt="house" />
@@ -76,11 +93,11 @@ const FullHouse: FC = () => {
           <div className="price">
             <h3>{house.title}</h3>
             <h3>Price: {house.price} $</h3>
-            <button className="button button--outline button--add">
-              <Link className="bot-container" to="/">
+            <Link className="bot-container" to="/">
+              <button className="button button--outline button--add">
                 <span>Back</span>
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </motion.div>
 
@@ -100,8 +117,14 @@ const FullHouse: FC = () => {
         </motion.div>
       </div>
 
-      <motion.div className="carousel" whileTap={{ cursor: 'grabbing' }}>
-        <motion.div drag="x" dragConstraints={{ right: 0, left: 0 }} className="inner-carousel">
+      <motion.div
+        className="carousel"
+        variants={carouselAnimation}
+        initial="hidden"
+        whileInView="visible">
+        <motion.div
+          
+          className="inner-carousel">
           {photos}
         </motion.div>
       </motion.div>
@@ -110,3 +133,16 @@ const FullHouse: FC = () => {
 };
 
 export default FullHouse;
+
+{
+  /* <motion.div className="carousel" variants={carouselAnimation}
+          initial="hidden"
+          whileInView="visible">
+        <motion.div ref={carousel} whileTap={{ cursor: 'grabbing' }}
+          drag="x"
+          dragConstraints={{ right: 0, left: -leftWidth }}
+          className="inner-carousel">
+          {photos}
+        </motion.div>
+      </motion.div> */
+}

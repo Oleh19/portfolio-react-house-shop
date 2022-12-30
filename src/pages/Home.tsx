@@ -64,18 +64,6 @@ const Home: FC = () => {
     },
   };
 
-  const blockAnimation = {
-    hidden: {
-      x: 0,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1.5 },
-    },
-  };
-
   return (
     <div className="container">
       <motion.div
@@ -94,11 +82,7 @@ const Home: FC = () => {
           <p>Something wrong. Try later</p>
         </div>
       ) : (
-        <motion.div  initial="hidden"
-        whileInView="visible"
-        variants={blockAnimation}
-        
-        className="content__items">{status === 'loading' ? skeletons : houseItem}</motion.div>
+        <div className="content__items">{status === 'loading' ? skeletons : houseItem}</div>
       )}
     </div>
   );
