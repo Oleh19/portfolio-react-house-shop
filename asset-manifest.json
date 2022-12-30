@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio-react-house-shop/static/css/main.399126ef.css",
+    "main.js": "/portfolio-react-house-shop/static/js/main.7543641a.js",
+    "static/js/949.c53e3123.chunk.js": "/portfolio-react-house-shop/static/js/949.c53e3123.chunk.js",
+    "static/media/empty-cart.png": "/portfolio-react-house-shop/static/media/empty-cart.db905d1f4b063162f25b.png",
+    "static/media/logo.svg": "/portfolio-react-house-shop/static/media/logo.8fe443848e4bb2a5a0e8d79470487fdf.svg",
+    "index.html": "/portfolio-react-house-shop/index.html",
+    "main.399126ef.css.map": "/portfolio-react-house-shop/static/css/main.399126ef.css.map",
+    "main.7543641a.js.map": "/portfolio-react-house-shop/static/js/main.7543641a.js.map",
+    "949.c53e3123.chunk.js.map": "/portfolio-react-house-shop/static/js/949.c53e3123.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.399126ef.css",
+    "static/js/main.7543641a.js"
+  ]
+}
