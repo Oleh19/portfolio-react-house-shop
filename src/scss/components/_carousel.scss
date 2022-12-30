@@ -1,0 +1,37 @@
+.carousel {
+    cursor: grab;
+    overflow: scroll;
+    margin-top: 2vh;
+    background: rgb(94, 4, 154);
+    background: linear-gradient(90deg, rgba(94, 4, 154, 1) 0%, rgba(0, 160, 246, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border: 2px solid white;
+
+    .inner-carousel {
+        display: flex;
+
+        .item {
+            min-width: 30%;
+            padding: 2vw 0 2vw 2vw;
+
+            &:hover {
+                transform: scale(1.05);
+                transition-duration: 0.5s;
+            }
+
+            @media (max-width: 850px) {
+                min-width: 50%;
+            }
+
+            &:last-child {
+                padding: 2vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+
+            }
+        }
+    }
+}

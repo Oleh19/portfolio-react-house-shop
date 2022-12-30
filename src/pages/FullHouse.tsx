@@ -13,6 +13,7 @@ const FullHouse: FC = () => {
   }>();
 
   const { id } = useParams();
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,8 +58,14 @@ const FullHouse: FC = () => {
     },
   };
 
+  const photos = house.secondImg.map((photo, index) => (
+    <motion.div className="item" key={index}>
+      <img src={photo} alt="house" />
+    </motion.div>
+  ));
+
   return (
-    <div>
+    <>
       <div className="full-item">
         <motion.div
           variants={imageAnimation}
@@ -92,7 +99,13 @@ const FullHouse: FC = () => {
           ullam delectus, quisquam excepturi fugit voluptatibus laborum suscipit enim!
         </motion.div>
       </div>
-    </div>
+
+      <motion.div className="carousel" whileTap={{ cursor: 'grabbing' }}>
+        <motion.div drag="x" dragConstraints={{ right: 0, left: 0 }} className="inner-carousel">
+          {photos}
+        </motion.div>
+      </motion.div>
+    </>
   );
 };
 
