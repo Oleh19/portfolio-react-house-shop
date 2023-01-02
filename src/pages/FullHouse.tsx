@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const FullHouse: FC = () => {
   const [leftWidth, setLeftWidth] = useState(0);
+
   const [house, setHouse] = useState<{
     imageUrl: string;
     title: string;
@@ -113,7 +114,10 @@ const FullHouse: FC = () => {
           deserunt iste est odio recusandae voluptas temporibus corporis aperiam, blanditiis
           cupiditate in vel eius ea molestiae? Lorem, ipsum dolor sit amet consectetur adipisicing
           elit. Rerum at alias dolor minima cum est facere blanditiis? Iusto ad, eveniet expedita
-          ullam delectus, quisquam excepturi fugit voluptatibus laborum suscipit enim!
+          ullam delectus, quisquam excepturi fugit voluptatibus laborum suscipit enim! Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Fugit temporibus laboriosam, dolores vitae
+          eaque illum et laborum ab laudantium consectetur placeat iusto! Asperiores id ipsam
+          officiis molestiae dolor facere ad!
         </motion.div>
       </div>
 
@@ -122,27 +126,10 @@ const FullHouse: FC = () => {
         variants={carouselAnimation}
         initial="hidden"
         whileInView="visible">
-        <motion.div
-          
-          className="inner-carousel">
-          {photos}
-        </motion.div>
+        <motion.div className="inner-carousel">{photos}</motion.div>
       </motion.div>
     </>
   );
 };
 
 export default FullHouse;
-
-{
-  /* <motion.div className="carousel" variants={carouselAnimation}
-          initial="hidden"
-          whileInView="visible">
-        <motion.div ref={carousel} whileTap={{ cursor: 'grabbing' }}
-          drag="x"
-          dragConstraints={{ right: 0, left: -leftWidth }}
-          className="inner-carousel">
-          {photos}
-        </motion.div>
-      </motion.div> */
-}
