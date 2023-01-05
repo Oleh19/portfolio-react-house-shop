@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio-react-house-shop/static/css/main.c17be01d.css",
-    "main.js": "/portfolio-react-house-shop/static/js/main.3bf6b4f2.js",
+    "main.css": "/portfolio-react-house-shop/static/css/main.3331d2ab.css",
+    "main.js": "/portfolio-react-house-shop/static/js/main.27ebdd4d.js",
     "static/js/949.c53e3123.chunk.js": "/portfolio-react-house-shop/static/js/949.c53e3123.chunk.js",
     "static/media/empty-cart.png": "/portfolio-react-house-shop/static/media/empty-cart.db905d1f4b063162f25b.png",
     "static/media/logo.svg": "/portfolio-react-house-shop/static/media/logo.8fe443848e4bb2a5a0e8d79470487fdf.svg",
     "index.html": "/portfolio-react-house-shop/index.html",
-    "main.c17be01d.css.map": "/portfolio-react-house-shop/static/css/main.c17be01d.css.map",
-    "main.3bf6b4f2.js.map": "/portfolio-react-house-shop/static/js/main.3bf6b4f2.js.map",
+    "main.3331d2ab.css.map": "/portfolio-react-house-shop/static/css/main.3331d2ab.css.map",
+    "main.27ebdd4d.js.map": "/portfolio-react-house-shop/static/js/main.27ebdd4d.js.map",
     "949.c53e3123.chunk.js.map": "/portfolio-react-house-shop/static/js/949.c53e3123.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c17be01d.css",
-    "static/js/main.3bf6b4f2.js"
+    "static/css/main.3331d2ab.css",
+    "static/js/main.27ebdd4d.js"
   ]
 }
