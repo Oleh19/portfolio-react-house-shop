@@ -1,24 +1,17 @@
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import Carousel from '../components/Carousel';
 
 const FullHouse: FC = () => {
-  const [leftWidth, setLeftWidth] = useState(0);
-
   const [house, setHouse] = useState<{
     imageUrl: string;
     title: string;
     price: number;
     secondImg: string[];
   }>();
-
-  const carousel: any = useRef(0);
-
-  useEffect(() => {
-    setLeftWidth(carousel.current.scrollWidth + carousel.current.offsetWidth);
-  }, []);
 
   const { id } = useParams();
 
@@ -66,22 +59,6 @@ const FullHouse: FC = () => {
     },
   };
 
-  const carouselAnimation = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { duration: 1.5 },
-    },
-  };
-
-  const photos = house.secondImg.map((photo, index) => (
-    <motion.div className="item" key={index}>
-      <img src={photo} alt="house" />
-    </motion.div>
-  ));
-
   return (
     <>
       <div className="full-item">
@@ -121,13 +98,7 @@ const FullHouse: FC = () => {
         </motion.div>
       </div>
 
-      <motion.div
-        className="carousel"
-        variants={carouselAnimation}
-        initial="hidden"
-        whileInView="visible">
-        <motion.div className="inner-carousel">{photos}</motion.div>
-      </motion.div>
+      <Carousel photos={house.secondImg}  />
     </>
   );
 };

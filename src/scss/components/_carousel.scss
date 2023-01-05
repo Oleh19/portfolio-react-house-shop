@@ -1,44 +1,64 @@
 .carousel {
-    cursor: pointer;
-    overflow:auto;
-    margin-top: 2vh;
-    background: rgb(94, 4, 154);
-    background: linear-gradient(90deg, rgba(94, 4, 154, 1) 0%, rgba(0, 160, 246, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    border: 2px solid white;
+    background: rgb(59, 154, 192);
+    border-radius: 0.5rem;
 
-    .inner-carousel {
-        display: flex;
+    .carousel-body {
+        padding-top: 2rem;
+        margin-top: 0.5rem;
 
-        .item {
-            min-width: 30%;
-            padding: 2vw 0 2vw 2vw;
 
-            &:hover {
-                transform: scale(1.05);
-                transition-duration: 0.5s;
-            }
+        .swipper-slide {
+            height: auto;
+            border: 1px;
+            --tw-border-opacity: 1;
+            border-color: rgb(75 85 99 / var(--tw-border-opacity));
+            background-color: rgb(11 15 41 / var(--tw-bg-opacity));
+            border-radius: 0.5rem;
+            overflow: hidden;
 
-            @media (max-width: 850px) {
-                min-width: 50%;
-            }           
-
-            @media (max-width: 650px) {
-                min-width: 90%;
-            }
-
-            &:last-child {
-                padding: 2vw;
-            }
 
             img {
                 width: 100%;
                 height: 100%;
-                pointer-events: none;
+                object-fit: cover;
+                border-radius: 0.5rem
+            }
 
-                @media (max-width: 650px) {
-                    width: 90vw;
+        }
+
+        .slider-button-block {
+            width: 100%;
+            padding: 0 0.25rem;
+            gap: 1.5rem;
+            padding-top: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+
+            .slider-button {
+                width: 100%;
+                padding: 0 0.25rem;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                border-radius: 0.25rem;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                background-color: white;
+
+                &:hover {
+                    background-color: rgb(11 15 41);
+                    color: white;
                 }
-
             }
         }
     }
