@@ -1,38 +1,35 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css/pagination'
-// import 'swiper/css/navigation'
-import 'swiper/css'
+import 'swiper/css';
 
 import { BsCaretLeftFill, BsCaretRightFill } from 'react-icons/bs';
 
 interface ICarouselProps {
   photos: string[];
 }
-
-// const carouselAnimation = {
-//   hidden: {
-//     y: 100,
-//     opacity: 0,
-//   },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { duration: 1.5 },
-//   },
-// };
+// const countSliders = window.screen.width <= 850 ? 1 : 3;
 
 const Carousel: FC<ICarouselProps> = ({ photos }) => {
   const [prevEl, setPrevEl] = useState<any | null>(null);
   const [nextEl, setNextEl] = useState<any | null>(null);
+  const [countSliders, setCountSliders] = useState(3);
+
+  useEffect(() => {
+    const numberSlides = window.innerWidth;
+    if (numberSlides <= 850) {
+      setCountSliders(1);
+    } else {
+      setCountSliders(3);
+    }
+  }, []);
 
   return (
     <div className="carousel">
       <div className="carousel-body">
         <Swiper
           navigation={{ prevEl, nextEl }}
-          slidesPerView={4}
+          slidesPerView={countSliders}
           spaceBetween={40}
           autoplay={true}
           speed={1000}
@@ -59,13 +56,3 @@ const Carousel: FC<ICarouselProps> = ({ photos }) => {
   );
 };
 export default Carousel;
-
-// return (
-//   <motion.div
-//     className="carousel"
-//     variants={carouselAnimation}
-//     initial="hidden"
-//     whileInView="visible">
-//     <motion.div className="inner-carousel">{content}</motion.div>
-//   </motion.div>
-// );
